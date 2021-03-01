@@ -32,6 +32,9 @@ public class Tarea {
 	@ManyToOne
 	@JoinColumn(name="idUsuario")
 	private Usuario usuario;
+	@Column(name="descripcion",length = 255,nullable = true)
+	private String descripcion;
+	
 	public Integer getIdTarea() {
 		return idTarea;
 	}
@@ -80,7 +83,5 @@ public class Tarea {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	@Column(name="descripcion",length = 255,nullable = true)
-	private String descripcion;
 	
 }

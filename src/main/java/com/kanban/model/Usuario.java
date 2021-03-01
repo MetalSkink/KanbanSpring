@@ -19,6 +19,8 @@ public class Usuario {
 	private String nombre;
 	@Column(name="password",length = 100,nullable = false)
 	private String password;
+	@Column(name="nControl",length = 50,nullable = false)
+	private String nControl;
 	@Column(name="permisos",nullable = false)
 	private Integer permisos;
 	public Integer getIdUsuario() {
@@ -32,6 +34,12 @@ public class Usuario {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	public String getnControl() {
+		return nControl;
+	}
+	public void setnControl(String nControl) {
+		this.nControl = nControl;
 	}
 	public String getPassword() {
 		return password;
